@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>学習クリニック｜受験生のかかりつけ医 – オンライン学習戦略相談</title>
+<meta name="description" content="「何から勉強すればいいかわからない」受験生のための学習クリニック。大学受験・高校受験対応。全科目の学習戦略を診断・処方します。単発OK、オンライン完結。">
+<meta name="keywords" content="学習相談, 受験相談, 勉強法, 学習戦略, オンライン, 大学受験, 高校受験, 学習計画, 参考書, 受験生">
+<meta name="author" content="Yosh｜学習クリニック">
+<link rel="canonical" href="https://あなたのドメイン.com/">
+
+<!-- OGP (SNSシェア用) -->
+<meta property="og:title" content="学習クリニック｜受験生のかかりつけ医">
+<meta property="og:description" content="「何から勉強すればいいかわからない」受験生のための学習戦略相談。全科目対応・単発OK・オンライン完結。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://あなたのドメイン.com/">
+<meta property="og:image" content="https://あなたのドメイン.com/ogp.png">
+<meta property="og:site_name" content="学習クリニック">
+<meta property="og:locale" content="ja_JP">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="学習クリニック｜受験生のかかりつけ医">
+<meta name="twitter:description" content="「何から勉強すればいいかわからない」受験生のための学習戦略相談。全科目対応・単発OK・オンライン完結。">
+<meta name="twitter:image" content="https://あなたのドメイン.com/ogp.png">
+
+<!-- 構造化データ (Google検索のリッチリザルト用) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "学習クリニック",
+  "description": "受験生のための学習戦略相談サービス。大学受験・高校受験対応。全科目の学習戦略を診断・処方します。",
+  "url": "https://あなたのドメイン.com/",
+  "founder": {
+    "@type": "Person",
+    "name": "Yosh"
+  },
+  "serviceType": "学習相談・受験相談",
+  "areaServed": {
+    "@type": "Country",
+    "name": "JP"
+  },
+  "availableChannel": {
+    "@type": "ServiceChannel",
+    "serviceType": "オンライン"
+  }
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700;900&family=Noto+Serif+JP:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #1a2744;
+    --navy-light: #243352;
+    --teal: #2a9d8f;
+    --teal-light: #40b4a6;
+    --teal-pale: #e8f6f4;
+    --cream: #faf8f5;
+    --warm-white: #fffdf9;
+    --text-primary: #2c2c2c;
+    --text-secondary: #5a5a5a;
+    --text-light: #8a8a8a;
+    --accent-warm: #e8a87c;
+    --accent-coral: #e07a5f;
+    --border-light: #e8e4df;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+  }
+
+  body {
+    font-family: 'Zen Maru Gothic', sans-serif;
+    color: var(--text-primary);
+    background: var(--cream);
+    line-height: 1.9;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  /* ===== HERO ===== */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    background: var(--navy);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -30%;
+    right: -20%;
+    width: 700px;
+    height: 700px;
+    background: radial-gradient(circle, rgba(42,157,143,0.15) 0%, transparent 70%);
+    border-radius: 50%;
+    animation: float 12s ease-in-out infinite;
+  }
+
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -20%;
+    left: -15%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(232,168,124,0.1) 0%, transparent 70%);
+    border-radius: 50%;
+    animation: float 15s ease-in-out infinite reverse;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translate(0, 0); }
+    50% { transform: translate(30px, -20px); }
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 700px;
+  }
+
+  .hero-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    opacity: 0;
+    animation: fadeUp 0.8s 0.2s forwards;
+  }
+
+  .hero-title {
+    font-family: 'Noto Serif JP', serif;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.6rem;
+    opacity: 0;
+    animation: fadeUp 0.8s 0.4s forwards;
+  }
+
+  .hero-subtitle {
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+    color: var(--teal-light);
+    font-weight: 500;
+    margin-bottom: 2.5rem;
+    opacity: 0;
+    animation: fadeUp 0.8s 0.6s forwards;
+  }
+
+  .hero-lead {
+    font-size: clamp(0.95rem, 2vw, 1.1rem);
+    color: rgba(255,255,255,0.7);
+    line-height: 2;
+    max-width: 520px;
+    margin: 0 auto 3rem;
+    opacity: 0;
+    animation: fadeUp 0.8s 0.8s forwards;
+  }
+
+  .hero-cta {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background: var(--teal);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    transition: all 0.3s ease;
+    opacity: 0;
+    animation: fadeUp 0.8s 1s forwards;
+  }
+
+  .hero-cta:hover {
+    background: var(--teal-light);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(42,157,143,0.3);
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .scroll-hint {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    opacity: 0;
+    animation: fadeUp 0.8s 1.4s forwards;
+  }
+
+  .scroll-hint span {
+    display: block;
+    width: 2px;
+    height: 40px;
+    background: rgba(255,255,255,0.3);
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .scroll-hint span::after {
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--teal-light);
+    animation: scrollDown 2s ease infinite;
+  }
+
+  @keyframes scrollDown {
+    0% { top: -100%; }
+    100% { top: 100%; }
+  }
+
+  /* ===== SECTIONS ===== */
+  section {
+    padding: 6rem 2rem;
+  }
+
+  .section-inner {
+    max-width: 780px;
+    margin: 0 auto;
+  }
+
+  .section-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--teal);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 0.8rem;
+  }
+
+  .section-title {
+    font-family: 'Noto Serif JP', serif;
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 2rem;
+    line-height: 1.5;
+  }
+
+  .section-text {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    line-height: 2.1;
+    margin-bottom: 1.5rem;
+  }
+
+  /* ===== CONCEPT (What is 学習クリニック) ===== */
+  .concept {
+    background: var(--warm-white);
+  }
+
+  .concept-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+  }
+
+  .concept-card {
+    background: #fff;
+    border: 1px solid var(--border-light);
+    border-radius: 16px;
+    padding: 2rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .concept-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 40px rgba(26,39,68,0.06);
+  }
+
+  .concept-card-icon {
+    font-size: 1.8rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .concept-card h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 0.6rem;
+  }
+
+  .concept-card p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.9;
+  }
+
+  @media (min-width: 640px) {
+    .concept-cards {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  /* ===== PHILOSOPHY ===== */
+  .philosophy {
+    background: var(--navy);
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .philosophy::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+      radial-gradient(ellipse at 20% 50%, rgba(42,157,143,0.08) 0%, transparent 50%),
+      radial-gradient(ellipse at 80% 80%, rgba(232,168,124,0.06) 0%, transparent 50%);
+  }
+
+  .philosophy .section-inner {
+    position: relative;
+    z-index: 1;
+  }
+
+  .philosophy .section-label {
+    color: var(--teal-light);
+  }
+
+  .philosophy .section-title {
+    color: #fff;
+  }
+
+  .philosophy .section-text {
+    color: rgba(255,255,255,0.75);
+  }
+
+  .philosophy-quote {
+    border-left: 3px solid var(--teal);
+    padding: 1.5rem 0 1.5rem 1.5rem;
+    margin: 2rem 0;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 1.15rem;
+    color: rgba(255,255,255,0.9);
+    line-height: 2;
+  }
+
+  .philosophy-steps {
+    margin-top: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+
+  .philosophy-step {
+    display: flex;
+    gap: 1.2rem;
+    align-items: flex-start;
+  }
+
+  .step-number {
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    background: var(--teal);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #fff;
+    margin-top: 0.2rem;
+  }
+
+  .step-content h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 0.2rem;
+  }
+
+  .step-content p {
+    font-size: 0.92rem;
+    color: rgba(255,255,255,0.65);
+    line-height: 1.8;
+  }
+
+  /* ===== ABOUT ===== */
+  .about {
+    background: var(--warm-white);
+  }
+
+  .about-profile {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  .about-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    color: var(--teal-light);
+    flex-shrink: 0;
+    border: 4px solid var(--teal-pale);
+  }
+
+  .about-info h3 {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 0.3rem;
+  }
+
+  .about-info .about-role {
+    font-size: 0.9rem;
+    color: var(--teal);
+    font-weight: 500;
+    margin-bottom: 1rem;
+  }
+
+  .about-info p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 2;
+    margin-bottom: 1rem;
+  }
+
+  .about-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  .about-tag {
+    background: var(--teal-pale);
+    color: var(--teal);
+    font-size: 0.8rem;
+    font-weight: 500;
+    padding: 0.35rem 0.9rem;
+    border-radius: 20px;
+  }
+
+  @media (min-width: 640px) {
+    .about-profile {
+      flex-direction: row;
+      align-items: flex-start;
+    }
+  }
+
+  /* ===== CTA ===== */
+  .cta {
+    background: var(--cream);
+    text-align: center;
+  }
+
+  .cta-box {
+    background: #fff;
+    border: 1px solid var(--border-light);
+    border-radius: 20px;
+    padding: 3rem 2rem;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .cta-box h2 {
+    font-family: 'Noto Serif JP', serif;
+    font-size: clamp(1.3rem, 3vw, 1.6rem);
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 1rem;
+    line-height: 1.6;
+  }
+
+  .cta-box p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 2;
+    margin-bottom: 2rem;
+  }
+
+  .cta-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    align-items: center;
+  }
+
+  .cta-btn-primary {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background: var(--teal);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    transition: all 0.3s ease;
+  }
+
+  .cta-btn-primary:hover {
+    background: var(--teal-light);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(42,157,143,0.3);
+  }
+
+  .cta-note {
+    font-size: 0.82rem;
+    color: var(--text-light);
+    margin-top: 0.5rem;
+  }
+
+  /* ===== FOOTER ===== */
+  footer {
+    background: var(--navy);
+    color: rgba(255,255,255,0.4);
+    text-align: center;
+    padding: 2.5rem 2rem;
+    font-size: 0.82rem;
+  }
+
+  footer .footer-name {
+    font-family: 'Noto Serif JP', serif;
+    color: rgba(255,255,255,0.7);
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+  }
+
+  /* ===== NAV ===== */
+  .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s;
+  }
+
+  .nav.scrolled {
+    background: rgba(26,39,68,0.95);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 2px 20px rgba(0,0,0,0.15);
+    padding: 0.7rem 2rem;
+  }
+
+  .nav-logo {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .nav-logo span {
+    font-size: 1.2rem;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    color: rgba(255,255,255,0.7);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+
+  .nav-links a:hover {
+    color: var(--teal-light);
+  }
+
+  @media (max-width: 640px) {
+    .nav-links { display: none; }
+    section { padding: 4rem 1.5rem; }
+    .cta-box { padding: 2rem 1.5rem; }
+  }
+
+  /* ===== SCROLL ANIMATION ===== */
+  .reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <a href="#" class="nav-logo"><span>🩺</span> 学習クリニック</a>
+  <ul class="nav-links">
+    <li><a href="#concept">クリニックとは</a></li>
+    <li><a href="#philosophy">考え方</a></li>
+    <li><a href="#about">自己紹介</a></li>
+    <li><a href="#contact">お問い合わせ</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-icon">🩺</div>
+    <h1 class="hero-title">学習クリニック</h1>
+    <p class="hero-subtitle">受験生のかかりつけ医</p>
+    <p class="hero-lead">
+      「何から勉強すればいいかわからない」<br>
+      その悩み、一緒に診断して、処方します。<br>
+      単発でも、何度でも。
+    </p>
+    <a href="#contact" class="hero-cta">相談してみる</a>
+  </div>
+  <div class="scroll-hint"><span></span></div>
+</section>
+
+<!-- CONCEPT -->
+<section class="concept" id="concept">
+  <div class="section-inner">
+    <p class="section-label reveal">What is</p>
+    <h2 class="section-title reveal">学習クリニックとは</h2>
+    <p class="section-text reveal">
+      学習クリニックは、「教える」塾ではありません。<br>
+      あなたの勉強の現状を<strong>診断</strong>し、今やるべきことを<strong>処方</strong>する場所です。
+    </p>
+    <p class="section-text reveal">
+      病院に行くように、困ったときに来て、元気になったら帰る。<br>
+      また調子が悪くなったら、いつでも戻ってきてください。
+    </p>
+
+    <div class="concept-cards">
+      <div class="concept-card reveal">
+        <div class="concept-card-icon">🔍</div>
+        <h3>診断する</h3>
+        <p>成績だけでなく、普段の勉強のしかた・使っている教材・考え方のクセまで、対話を通じてていねいに把握します。</p>
+      </div>
+      <div class="concept-card reveal">
+        <div class="concept-card-icon">📋</div>
+        <h3>処方する</h3>
+        <p>何を、どの順番で、どう取り組むか。参考書選びから学習の進め方まで、あなた専用のプランを組み立てます。</p>
+      </div>
+      <div class="concept-card reveal">
+        <div class="concept-card-icon">💬</div>
+        <h3>理由を伝える</h3>
+        <p>「なぜこれをやるのか」を必ず伝えます。納得して勉強できることが、続けるためのいちばんの力になるから。</p>
+      </div>
+      <div class="concept-card reveal">
+        <div class="concept-card-icon">🚀</div>
+        <h3>自立を目指す</h3>
+        <p>最終的なゴールは、あなた自身が「自分で診断・処方できる学習者」になること。私が必要なくなることが、いちばんの成功です。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PHILOSOPHY -->
+<section class="philosophy" id="philosophy">
+  <div class="section-inner">
+    <p class="section-label reveal">Philosophy</p>
+    <h2 class="section-title reveal">大切にしていること</h2>
+    <p class="section-text reveal">
+      塾や予備校は「すでに優秀な子がさらに上を目指す場所」というイメージがあるかもしれません。でも、8年以上の現場経験から見えてきた実態は違いました。
+    </p>
+    <p class="section-text reveal">
+      多くの生徒は、「勉強で困っていて、助けを求めている」。<br>
+      その本質は、病気やケガで困っている人が治療を求めるのと同じです。
+    </p>
+    <div class="philosophy-quote reveal">
+      表面の「成績が悪い」に対処するだけでは、根っこは変わらない。<br>
+      大事なのは、「動機とその達成手段を筋道だてて考えられる力」を育てること。<br>
+      これは勉強だけでなく、人生のあらゆる場面で使える力です。
+    </div>
+    <p class="section-text reveal">
+      情報や教材へのアクセスは平等になりました。でも、それを使いこなす力を育てられる指導者へのアクセスは、まだ全然平等ではない。特に地方では。
+    </p>
+    <p class="section-text reveal">
+      だから私は、勉強を入口に「自分の人生を自分で考えて動ける人」を増やしたい。それが、この学習クリニックの根っこにある思いです。
+    </p>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="section-inner">
+    <p class="section-label reveal">About</p>
+    <h2 class="section-title reveal">自己紹介</h2>
+    <div class="about-profile reveal">
+      <div class="about-avatar">Y</div>
+      <div class="about-info">
+        <h3>Yosh</h3>
+        <p class="about-role">学習クリニック 主宰</p>
+        <p>
+          塾講師として8年以上、学習法の研究と教材設計に取り組んできました。指導マニュアルの作成、オンライン指導、低学力層の偏差値改造から進学校の学習戦略相談まで、幅広い経験があります。
+        </p>
+        <p>
+          「教えること」以上に、「その人が自分で勉強できるようになること」にこだわってきました。全科目対応可能です。
+        </p>
+        <div class="about-tags">
+          <span class="about-tag">大学受験</span>
+          <span class="about-tag">高校受験</span>
+          <span class="about-tag">全科目対応</span>
+          <span class="about-tag">オンライン対応</span>
+          <span class="about-tag">学習戦略</span>
+          <span class="about-tag">教材設計</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta" id="contact">
+  <div class="section-inner">
+    <div class="cta-box reveal">
+      <h2>まずは、お気軽にご相談ください</h2>
+      <p>
+        「何から始めればいいかわからない」「今のやり方でいいのか不安」——<br>
+        そんなときに、頼れる場所でありたいと思っています。<br>
+        単発のご相談から、お気軽にどうぞ。
+      </p>
+      <div class="cta-buttons">
+        <a href="#" class="cta-btn-primary">相談する（ストアカ）</a>
+        <p class="cta-note">※ ストアカでのオンライン相談を受け付けています</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p class="footer-name">学習クリニック｜Yosh</p>
+  <p>&copy; 2026 学習クリニック. All rights reserved.</p>
+</footer>
+
+<script>
+// Nav scroll effect
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 60);
+});
+
+// Scroll reveal
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry, i) => {
+    if (entry.isIntersecting) {
+      setTimeout(() => {
+        entry.target.classList.add('visible');
+      }, i * 80);
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.15 });
+
+reveals.forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
